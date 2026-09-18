@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+package com.klash.ai
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="KLASH.AI"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+import android.app.Activity
+import android.os.Bundle
+import android.widget.TextView
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Your AI. Your world."
-        android:textSize="18sp" />
+class MainActivity : Activity() {
 
-</LinearLayout>
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val text = TextView(this)
+        text.text = "KLASH.AI\n\nApp started successfully!"
+        text.textSize = 28f
+        text.setPadding(40, 40, 40, 40)
+
+        setContentView(text)
+    }
+}
